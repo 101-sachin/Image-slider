@@ -14,10 +14,10 @@ const slideimg = () => {
 };
 
 const createdots = () => {
-    slides.forEach((_, i) => {
+    slides.forEach((a, i) => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
-        dot.addEventListener('click', () => goToSlide(i));
+        dot.addEventListener('click', () => toslide(i));
         dotcon.appendChild(dot);
     });
     updateDots();
@@ -29,7 +29,7 @@ const updateDots = () => {
     dots[count].classList.add('active');
 };
 
-function goToSlide(index) {
+function toslide(index) {
     count = index;
     slideimg();
 }
